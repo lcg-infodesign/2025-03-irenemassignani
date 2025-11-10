@@ -1,18 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketch dei Vulcani</title>
 
-    <title>Sketch</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+</head>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+<body>
+  <main id="main"></main>
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+  <section id="info">
+    <h2>Come leggere la mappa</h2>
+    <p>Passando il cursore sopra i vulcani, apparirà un pannello informativo con i dettagli di ciascun vulcano.</p>
+
+    <div class="info-container">
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Colonna</th>
+            <th>Descrizione</th>
+            <th>Esempio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Country</td>
+            <td>Paese in cui si trova il vulcano</td>
+            <td>Papua New Guinea</td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td>Localizzazione più specifica all’interno del paese</td>
+            <td>Admiralty Is-SW Paci</td>
+          </tr>
+          <tr>
+            <td>Volcano Name</td>
+            <td>Nome del vulcano</td>
+            <td>St. Andrew Strait</td>
+          </tr>
+          <tr>
+            <td>Type</td>
+            <td>Tipo di vulcano o sua struttura</td>
+            <td>Complex volcano</td>
+          </tr>
+          <tr>
+            <td>TypeCategory</td>
+            <td>Categoria principale del vulcano</td>
+            <td>Stratovolcano</td>
+          </tr>
+          <tr>
+            <td>Elevation (m)</td>
+            <td>Altitudine sopra o sotto il livello del mare (m)</td>
+            <td>270</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td>Stato eruttivo o storico del vulcano</td>
+            <td>Historical</td>
+          </tr>
+          <tr>
+            <td>Last Known Eruption</td>
+            <td>Ultima eruzione conosciuta o classificazione della storia eruttiva</td>
+            <td>D2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="sidebar">
+        <div class="sidebar-box">
+        <h3>Statistiche</h3>
+        <p>Totale vulcani: 1607</p>
+        <p>Vulcano con Altitudine maggiore: Ojos del Salado, Argentina, 6879m </p>
+        <p>Vulcano con Altitudine minore: Udintsev Transform, Pacific Ocean, -5700m </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="sketch.js"></script>
+</body>
 </html>
